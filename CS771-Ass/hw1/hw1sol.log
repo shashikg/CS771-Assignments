@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.8.22)  22 AUG 2018 20:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.8.22)  2 SEP 2018 23:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **hw1sol.tex
-(/home/shashikg/Desktop/5th sem/CS771/CS771-Ass/hw1/hw1sol.tex
+(/home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw1/hw1sol.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -23,7 +23,7 @@ File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (/home/shashikg/Desktop/5th sem/CS771/CS771-Ass/hw1/mlsubmit.sty (/home/shashikg/Desktop/5th sem/CS771/CS771-Ass/hw1/ml.sty (/usr/share/texlive/texmf-dist/tex/latex/preprint/fullpage.sty
+) (/home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw1/mlsubmit.sty (/home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw1/ml.sty (/usr/share/texlive/texmf-dist/tex/latex/preprint/fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip43
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
@@ -296,7 +296,7 @@ Package color Info: Driver file: pdftex.def on input line 147.
 \c@mlalgo=\count122
 )
 \c@mlanswer=\count123
-) (/home/shashikg/Desktop/5th sem/CS771/CS771-Ass/hw1/hw1sol.aux)
+) (/home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw1/hw1sol.aux)
 \openout1 = `hw1sol.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -350,7 +350,7 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 5.
 LaTeX Info: Redefining \pageref on input line 5.
 LaTeX Info: Redefining \nameref on input line 5.
- (/home/shashikg/Desktop/5th sem/CS771/CS771-Ass/hw1/hw1sol.out) (/home/shashikg/Desktop/5th sem/CS771/CS771-Ass/hw1/hw1sol.out)
+ (/home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw1/hw1sol.out) (/home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw1/hw1sol.out)
 \@outlinefile=\write3
 \openout3 = `hw1sol.out'.
 
@@ -363,7 +363,17 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 11.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for U+stmry on input line 11.
- (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) [1
+ (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+/home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw1/hw1sol.tex:65: Extra }, or forgotten \endgroup.
+l.65   \end{enumerate}}
+                       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+[1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
@@ -373,31 +383,36 @@ LaTeX Font Info:    Try loading font information for U+stmry on input line 11.
 
 ] [5
 
-] [6
+]
+Underfull \hbox (badness 10000) in paragraph at lines 170--179
+
+ []
+
+[6
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 50.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
- (/home/shashikg/Desktop/5th sem/CS771/CS771-Ass/hw1/hw1sol.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 50.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 50.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 193.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 193.
+ (/home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw1/hw1sol.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 193.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 193.
 Package rerunfilecheck Info: File `hw1sol.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 50.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 193.
  ) 
 Here is how much of TeX's memory you used:
- 7469 strings out of 492982
- 102751 string characters out of 6134896
- 191273 words of memory out of 5000000
+ 7500 strings out of 492982
+ 103243 string characters out of 6134896
+ 196273 words of memory out of 5000000
  10916 multiletter control sequences out of 15000+600000
  11068 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,9n,36p,242b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "/home/shashikg/Desktop/5th sem/CS771/CS771-Ass/hw1/hw1sol.pdf" (6 pages, 72471 bytes).
+ 48i,9n,36p,242b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on "/home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw1/hw1sol.pdf" (6 pages, 141239 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
+ 129 PDF objects out of 1000 (max. 8388607)
+ 107 compressed objects within 2 object streams
+ 44 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

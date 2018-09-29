@@ -30,10 +30,23 @@ def meanUnseenClass(s, u_seen):
     print mean
     return mean
 
-def predict(u, x_test, y_test, theta):
-    # This function predicts the classes based on given mean data implementation was done using theta as per mahalanobis distance
-    # Returns the values of prediction and accuracy
+# def predict(u, x_test, y_test, theta):
+#     y_pred = np.zeros(y_test.shape)
+#     for i in range(x_test.shape[0]):
+#         diff = u - x_test[i]
+#         sq = np.square(diff)
+#         dist = np.dot(sq, theta)
+#         h = np.argmin(sq, axis = 0).reshape(sq.shape[1], 1)
+#         # print(h)
+#         # plt.hist(h)
+#         # print(hist.shape)
+#         hist = np.histogram(h, 10)
+#         print(np.argmax(hist[0]))
+#         y_pred[i] = np.argmin(dist) + 1
+#     acc = 1 - np.count_nonzero(y_pred-y_test)/float(y_test.shape[0])
+#     return y_pred, acc
 
+def predict(u, x_test, y_test, theta):
     acc = 0.
     dist = np.zeros((y_test.shape[0], u.shape[0]))
     for i in range(u.shape[0]):
@@ -42,40 +55,80 @@ def predict(u, x_test, y_test, theta):
         d = np.dot(sq, theta)
         dist[:, i] = d.reshape(d.shape[0],)
 
+    y_argsort = np.argsort(dist, axis=1)
+    y_argsort+=1
+    y_sort = np.sort(dist, axis=1)
+
     y_pred = np.argmin(dist, axis=1)
     y_pred = y_pred.reshape(y_pred.shape[0],1)
     y_pred+=1
     acc = 1 - np.count_nonzero(y_pred-y_test)/float(y_test.shape[0])
-
+    # for i in range(y_test.shape[0]):
+    #     print("For Test No.:" + str(i))
+    #     print(y_argsort[i])
+    #     print(y_sort[i])
+    #     # print()
+    #     print(y_test[i])
+    #     print(y_pred[i])
     return y_pred, acc
 
 def train(u, x_seen, theta):
-    # This function is to learn theta
-    # update rule was used as follow:
-    # if diff b/w any feature of mean and x is large on seen class then
-    # the theta for that will be removed more as compared to other
-    # since theta acts as a weights so next time weight for that specific feture will be reduced
-    # Conditioned at theta magnitude to be 1 so that it doesn't become to low
-    # NOTE: Not much improvement was observed!
     diff = u - x_seen
     sq = np.sum(np.square(diff), axis=0).reshape(diff.shape[1], 1)
     d = theta*sq
+    # d/=np.sum(d)
     theta = theta - 0.1*d
     theta/=np.sum(theta)
-
-    return theta
+    # print(np.sum(theta))
+    # for i in range(x_seen.shape[0]):
+    #     diff = (u - x_seen[i]).reshape(u.shape[0], 1)
+    #     sq = np.square(diff)#.reshape(diff.shape[1], 1)
+    #     d = theta*sq
+    #     theta = theta - 0.01*d
+    #     theta/=np.sum(theta)
+        # print(i)
+    # print(np.sum(d))
+    return theta, d
 
 def classifier():
     uSeen = meanSeenClass(X_seen)
-
     theta = np.ones((uSeen.shape[1], 1))
     theta/=np.sum(theta)
+    print(np.sum(theta))
 
-    # Uncomment this to learn theta k equlas no. of time you want to update the thetaself.
-    # k = 30
-    # for j in range(k):
-    #     for i in range(0, 30):
-    #         theta = train(uSeen[i], X_seen[i], theta)
+    u_seen = uSeen[:30]
+    attributes_seen = class_attributes_seen[:30]
+    attributes_unseen = class_attributes_seen[30:uSeen.shape[0]]
+    s = calcSimilarity(attributes_unseen, attributes_seen)
+    u_unseen = meanUnseenClass(s, u_seen)
+    p = 0.
+
+    for j in range(25):
+        # u_seen = uSeen[:30]
+        # attributes_seen = class_attributes_seen[:30]
+        # attributes_unseen = class_attributes_seen[30:uSeen.shape[0]]
+        # s = calcSimilarity(attributes_unseen, attributes_seen)
+        # u_unseen = meanUnseenClass(s, u_seen)
+        p = 0.
+        # print("from seen data")
+        for i in range(0, 40):
+            # p = 0.
+            x_test = X_seen[i]
+            theta, d = train(uSeen[i], x_test, theta)
+            # p = d
+            # p+=acc
+        #     print(i)
+        # print(p)
+
+    # print("from trained one")
+        # for i in range(30, uSeen.shape[0]):
+        #     x_test = X_seen[i]
+        #     y_test = np.ones((X_seen[i].shape[0],1)) + i%30
+        #     y_pred, acc = predict(u_unseen, x_test, y_test, theta)
+        #     p+=acc
+        #     # print(acc)
+        #
+        # print(10*p)
 
     # Test Class
     u_seen = uSeen
@@ -90,5 +143,5 @@ def classifier():
 
     print(100*acc)
 
-# Call the classifier
 classifier()
+# print(np.sum(class_attributes_unseen, axis=0))

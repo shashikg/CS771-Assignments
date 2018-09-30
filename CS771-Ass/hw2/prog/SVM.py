@@ -29,5 +29,4 @@ def main():
     plotDecisionBoundary(clf, x2, x1)
     plt.show()
 
-
 main()

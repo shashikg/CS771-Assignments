@@ -4,21 +4,84 @@
 
 \begin{document}
 
-\initmlsubmision{1} % assignment number
-{Machine Learner}   % your name
-{17001}	% your roll number
+\initmlsubmision{2} % assignment number
+{Shashi Kant Gupta}   % your name
+{160645}	% your roll number
 
 \begin{mlsolution}
-
-A vector symbol $\vb$, a symbol in blackboard font $\bR$, a symbol in calligraphic font $\cA$, \red{some} \green{colored} \blue{text}
-
+\noindent
+According to the given problem:
+\begin{equation}
+  p(\vw) = C*exp(\frac{-\lambda}{2}\vw^{T}\vw)
+\end{equation}
+\begin{equation}
+  p(\vy|\vX, \vw) = \prod_{n=1}^{N}\frac{1}{1 + exp(-y_{n}\vw^{T}\vx_{n})}
+\end{equation}
+Therefore, MAP estimate will be:
+\begin{equation}
+  \hat\vw_{MAP} = argmax_{\vw}log(p(\vy|\vX, \vw)) + log(p(\vw))
+\end{equation}
+\begin{equation}
+  \Rightarrow \hat\vw_{MAP} = argmax_{\vw}\sum_{n=1}^{N}-log(1 + exp(-y_{n}\vw^{T}\vx_{n})) + \frac{-\lambda}{2}\vw^{T}\vw
+\end{equation}
+\begin{equation}
+  \Rightarrow \hat\vw_{MAP} = argmin_{\vw}\sum_{n=1}^{N}log(1 + exp(-y_{n}\vw^{T}\vx_{n})) + \frac{\lambda}{2}\vw^{T}\vw
+\end{equation}
+Therefore, to minimise the negative log likelihood the partial derivatives w.r.t. to $\vw$ yields.
+\begin{equation}
+  \lambda\vw + \sum_{n=1}^{N}\frac{-y_{n}\vx_{n}exp(-y_{n}\vw^{T}\vx_{n})}{1 + exp(-y_{n}\vw^{T}\vx_{n})} = 0
+\end{equation}
+\begin{equation}
+  \Rightarrow \hat\vw_{MAP} = \frac{1}{\lambda}\sum_{n=1}^{N}\frac{exp(-y_{n}\vw^{T}\vx_{n})}{1 + exp(-y_{n}\vw^{T}\vx_{n})}y_{n}\vx_{n}
+\end{equation}
+\begin{equation}
+  \therefore \alpha_{n} = \frac{1}{\lambda}(\frac{exp(-y_{n}\vw^{T}\vx_{n})}{1 + exp(-y_{n}\vw^{T}\vx_{n})})
+\end{equation}
+From the expression of $\alpha_{n}$, we can see that it specifies an scaled version of non-class probabilities for $x{n}$. This make sense as we can see from the probability expression for the right-class as the $\alpha_{n}$ increases the probability for the right-class will increase, which means if probability of wrong-class is high it will give us a new estimate of $\vw$ such that probability of right class will increase.
 
 \end{mlsolution}
 
-\begin{mlsolution} 
+\begin{mlsolution}
 
-My solution to problem 2
-
+\noindent
+As per the problem:
+\begin{equation}
+  p(y=1) = \pi
+\end{equation}
+\begin{equation}
+  p(\vx|y=1) = \prod_{d=1}^{D}\mu_{d,1}^{xd}(1 - \mu_{d,1})^{1 - xd}
+\end{equation}
+\begin{equation}
+  p(\vx|y=0) = \prod_{d=0}^{D}\mu_{d,0}^{xd}(1 - \mu_{d,0})^{1 - xd}
+\end{equation}
+\begin{equation}
+  \therefore p(y=1|\vx) = \frac{\pi\prod_{d=1}^{D}\mu_{d,1}^{xd}(1 - \mu_{d,1})^{1 - xd}}{\pi\prod_{d=1}^{D}\mu_{d,1}^{xd}(1 - \mu_{d,1})^{1 - xd} +
+  (1-\pi)\prod_{d=0}^{D}\mu_{d,0}^{xd}(1 - \mu_{d,0})^{1 - xd}}
+\end{equation}
+\begin{equation}
+  = \frac{1}{1 + \frac{1-\pi}{\pi}\prod_{d=1}^{D}{[\frac{\mu_{d,0}}{\mu_{d,1}}]}^{\vx_{d}}
+  {[\frac{1 - \mu_{d,0}}{1-\mu_{d,1}}]}^{1-\vx_{d}} }
+\end{equation}
+\begin{equation}
+  = \frac{1}{1+f(\vx)}
+\end{equation}
+where $f(\vx) = \frac{1-\pi}{\pi}\prod_{d=1}^{D}{[\frac{\mu_{d,0}}{\mu_{d,1}}]}^{\vx_{d}}
+{[\frac{1 - \mu_{d,0}}{1-\mu_{d,1}}]}^{1-\vx_{d}}$
+\\It can be easily shown that:
+\begin{equation}
+  p(y=0|\vx) = \frac{1}{1+f(\vx)^{-1}}
+\end{equation}
+Therefore, this makes a discriminative model with its distribution as $Bernoulli[g(f(\vx))]$
+\\where $g(f(\vx)) = \frac{1}{1+f(\vx)}$ and $f(\vx) = \frac{1-\pi}{\pi}\prod_{d=1}^{D}{[\frac{\mu_{d,0}}{\mu_{d,1}}]}^{\vx_{d}}
+{[\frac{1 - \mu_{d,0}}{1-\mu_{d,1}}]}^{1-\vx_{d}}$
+\\
+\\
+\\For the decision boundary we can equate $p(y=1|\vx) = p(y=0|\vx)$. Which gives:
+\begin{equation}
+  \pi\prod_{d=1}^{D}\mu_{d,1}^{xd}(1 - \mu_{d,1})^{1 - xd} =
+  (1-\pi)\prod_{d=0}^{D}\mu_{d,0}^{xd}(1 - \mu_{d,0})^{1 - xd}
+\end{equation}
+Or equivalently we can write, $f(\vx) = 1$ as the decision boundary! Therefore, here we get an exponential decision boundary!
 
 \end{mlsolution}
 
@@ -33,7 +96,7 @@ My solution to problem 3
 My solution to problem 4
 
 \end{mlsolution}
-	
+
 \begin{mlsolution}
 
 My solution to problem 5

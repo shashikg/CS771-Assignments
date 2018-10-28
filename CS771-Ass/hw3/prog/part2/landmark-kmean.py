@@ -9,7 +9,7 @@ def load_data(loc):
 
 def landmark(x, y):
     #  = landmark(x_train, x_train)
-    return np.exp(-0.1*np.square(x.reshape((-1,1)) - y.reshape((1,-1))))
+    return np.exp(-0.1*np.sum(np.square(x - y.reshape((1,-1))), axis=1)).reshape(-1,1)
 
 def dist(x, u):
     d = np.zeros((x.shape[0], u.shape[0]))
@@ -31,18 +31,23 @@ def mean(x, c):
 
 def cluster():
     x = load_data('data')
-    fx = (np.sum(np.square(x), axis=1)).reshape(-1,1)
-    u = fx[:2,:]
-    c = predict(fx, u)
 
     for iter in range(10):
+        z = (np.random.randint(250, size=1)).reshape(())
+        fx = landmark(x, x[z,:])
+
+        u = fx[:2,:]
+        c = predict(fx, u)
+
         u = mean(fx, c)
         c = predict(fx, u)
         p = (c==1).reshape(c.shape[0])
         n = (c==0).reshape(c.shape[0])
 
-    plt.scatter(x[p,0], x[p,1], c='b')
-    plt.scatter(x[n,0], x[n,1], c='g')
+        plt.figure(iter)
+        plt.scatter(x[p,0], x[p,1], c='b')
+        plt.scatter(x[n,0], x[n,1], c='g')
+        plt.plot(x[z,0], x[z,1], 'r*')
 
 cluster()
 plt.show()

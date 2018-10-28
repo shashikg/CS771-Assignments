@@ -9,7 +9,7 @@ def load_data(loc):
     return train[:,0], train[:,1], test[:,0], test[:,1]
 
 def landmark(x, y):
-    #  = kernel(x_train, x_train)
+    #  = landmark(x_train, x_train)
     return np.exp(-0.1*np.square(x.reshape((-1,1)) - y.reshape((1,-1))))
 
 x_train, y_train, x_test, y_test = load_data('data')

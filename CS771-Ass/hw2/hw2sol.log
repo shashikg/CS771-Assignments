@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.8.22)  30 SEP 2018 15:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.8.22)  30 SEP 2018 21:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -296,36 +296,58 @@ Package color Info: Driver file: pdftex.def on input line 147.
 \c@mlalgo=\count122
 )
 \c@mlanswer=\count123
-) (/home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/hw2sol.aux)
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count124
+\lst@gtempboxa=\box31
+\lst@token=\toks32
+\lst@length=\count125
+\lst@currlwidth=\dimen129
+\lst@column=\count126
+\lst@pos=\count127
+\lst@lostspace=\dimen130
+\lst@width=\dimen131
+\lst@newlines=\count128
+\lst@lineno=\count129
+\lst@maxwidth=\dimen132
+ (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count130
+\lst@skipnumbers=\count131
+\lst@framebox=\box32
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+ (/home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/hw2sol.aux)
 \openout1 = `hw2sol.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count124
-\scratchdimen=\dimen129
-\scratchbox=\box31
-\nofMPsegments=\count125
-\nofMParguments=\count126
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count127
-\MPscratchDim=\dimen130
-\MPnumerator=\count128
-\makeMPintoPDFobject=\count129
-\everyMPtoPDFconversion=\toks33
+\scratchcounter=\count132
+\scratchdimen=\dimen133
+\scratchbox=\box33
+\nofMPsegments=\count133
+\nofMParguments=\count134
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count135
+\MPscratchDim=\dimen134
+\MPnumerator=\count136
+\makeMPintoPDFobject=\count137
+\everyMPtoPDFconversion=\toks34
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -338,40 +360,41 @@ Package grfext Info: Graphics extension search list:
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\AtBeginShipoutBox=\box32
-Package hyperref Info: Link coloring OFF on input line 5.
+\AtBeginShipoutBox=\box34
+Package hyperref Info: Link coloring OFF on input line 6.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count130
+\c@section@level=\count138
 )
-LaTeX Info: Redefining \ref on input line 5.
-LaTeX Info: Redefining \pageref on input line 5.
-LaTeX Info: Redefining \nameref on input line 5.
+LaTeX Info: Redefining \ref on input line 6.
+LaTeX Info: Redefining \pageref on input line 6.
+LaTeX Info: Redefining \nameref on input line 6.
  (/home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/hw2sol.out) (/home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/hw2sol.out)
 \@outlinefile=\write3
 \openout3 = `hw2sol.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 11.
+\c@lstlisting=\count139
+LaTeX Font Info:    Try loading font information for U+msa on input line 12.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 11.
+LaTeX Font Info:    Try loading font information for U+msb on input line 12.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 11.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 12.
  (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 73--80
+Underfull \hbox (badness 10000) in paragraph at lines 74--81
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--80
+Underfull \hbox (badness 10000) in paragraph at lines 74--81
 
  []
 
@@ -379,36 +402,165 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--80
 
 ] [3
 
-] [4
+]
+Underfull \hbox (badness 10000) in paragraph at lines 140--143
 
-] [5
+ []
 
-] [6
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 149.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 149.
+
+
+/home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/hw2sol.tex:155: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.155 \\
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/hw2sol.tex:156: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.156 \\
+        For the hard class case. $\mu_{nk}$ of sgd will change to our new $\...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/hw2sol.tex:156: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.156 \\F
+         or the hard class case. $\mu_{nk}$ of sgd will change to our new $\...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[4
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 113.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 113.
+Underfull \hbox (badness 10000) in paragraph at lines 160--163
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 177--181
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 187--192
+
+ []
+
+[6
+
+] [7
+
+]
+<Figure_1.png, id=110, 462.528pt x 346.896pt>
+File: Figure_1.png Graphic file (type png)
+<use Figure_1.png>
+Package pdftex.def Info: Figure_1.png  used on input line 235.
+(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+<Figure_12.png, id=112, 462.528pt x 346.896pt>
+File: Figure_12.png Graphic file (type png)
+<use Figure_12.png>
+Package pdftex.def Info: Figure_12.png  used on input line 236.
+(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+<Figure_2.png, id=113, 462.528pt x 346.896pt>
+File: Figure_2.png Graphic file (type png)
+<use Figure_2.png>
+Package pdftex.def Info: Figure_2.png  used on input line 237.
+(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+<Figure_22.png, id=114, 462.528pt x 346.896pt>
+File: Figure_22.png Graphic file (type png)
+<use Figure_22.png>
+Package pdftex.def Info: Figure_22.png  used on input line 238.
+(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+<Figure_svm1.png, id=115, 462.528pt x 346.896pt>
+File: Figure_svm1.png Graphic file (type png)
+<use Figure_svm1.png>
+Package pdftex.def Info: Figure_svm1.png  used on input line 239.
+(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+<svm2.png, id=116, 462.528pt x 346.896pt>
+File: svm2.png Graphic file (type png)
+<use svm2.png>
+Package pdftex.def Info: svm2.png  used on input line 240.
+(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+
+Overfull \hbox (9.55896pt too wide) in paragraph at lines 232--241
+[]
+ []
+
+
+Overfull \hbox (9.55896pt too wide) in paragraph at lines 232--241
+[]
+ []
+
+
+Overfull \hbox (9.55896pt too wide) in paragraph at lines 232--241
+[]
+ []
+
+
+Overfull \hbox (9.55896pt too wide) in paragraph at lines 232--241
+[]
+ []
+
+
+Overfull \hbox (9.55896pt too wide) in paragraph at lines 232--241
+[]
+ []
+
+
+Overfull \hbox (9.55896pt too wide) in paragraph at lines 232--241
+[] 
+ []
+
+[8
+
+ </home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/Figure_1.png>] [9 </home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/Figure_12.png>] [10 </home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/Figure_2.png>] [11 </home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/Figure_22.png>] [12 </home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/Figure_svm1.png>] [13 </home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/svm2.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 244.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 244.
  (/home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/hw2sol.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 113.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 113.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 244.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 244.
 Package rerunfilecheck Info: File `hw2sol.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 113.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 244.
  ) 
 Here is how much of TeX's memory you used:
- 7485 strings out of 492982
- 103069 string characters out of 6134896
- 196273 words of memory out of 5000000
- 10916 multiletter control sequences out of 15000+600000
+ 8750 strings out of 492982
+ 121716 string characters out of 6134896
+ 221765 words of memory out of 5000000
+ 12113 multiletter control sequences out of 15000+600000
  11068 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,9n,36p,446b,358s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "/home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/hw2sol.pdf" (6 pages, 151933 bytes).
+ 48i,9n,36p,446b,1138s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on "/home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/hw2sol.pdf" (13 pages, 323863 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 96 compressed objects within 1 object stream
- 29 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 219 PDF objects out of 1000 (max. 8388607)
+ 174 compressed objects within 2 object streams
+ 75 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

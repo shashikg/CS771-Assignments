@@ -92,6 +92,12 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/hw2sol.aux
 INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/hw2sol.aux
 OUTPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/hw2sol.aux
@@ -149,6 +155,26 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/Figure_1.png
+INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/Figure_1.png
+INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/Figure_1.png
+INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/Figure_12.png
+INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/Figure_12.png
+INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/Figure_12.png
+INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/Figure_2.png
+INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/Figure_2.png
+INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/Figure_2.png
+INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/Figure_22.png
+INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/Figure_22.png
+INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/Figure_22.png
+INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/Figure_svm1.png
+INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/Figure_svm1.png
+INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/Figure_svm1.png
+INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/svm2.png
+INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/svm2.png
+INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/svm2.png
 INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/hw2sol.aux
 INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/hw2sol.out
 INPUT /home/shashikg/Desktop/5th sem/CS771/github/CS771-Ass/hw2/hw2sol.out
@@ -164,6 +190,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb

@@ -1,8 +1,15 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-data = np.genfromtxt('data/binclassv2.txt',delimiter=',')
+Qn = 2 #Give 1 for different sigma case and 2 for same sigma case
+part = 2 #Give 1 for part 1 and 2 for part 2
 
+if part == 2:
+    data = np.genfromtxt('data/binclassv2.txt',delimiter=',')
+else:
+    data = np.genfromtxt('data/binclass.txt',delimiter=',')
+
+# Calculates the MLE parameters
 def calcMLE(x, pF, nF):
     mup = np.mean(x[pF], axis=0)
     mun = np.mean(x[nF], axis=0)
@@ -15,16 +22,24 @@ def calcMLE(x, pF, nF):
 
     return np.array([mup, mun]), np.array([[sigmap], [sigman]])
 
+# Will pplot the normal data points
 def plotDataPoints(x, y, pF, nF):
     plt.plot(x[pF,0], x[pF,1], 'r*')
     plt.plot(x[nF,0], x[nF,1], 'b*')
 
-def plotDecisionBoundary(mu, sigma, ki, kj, y, x, Qn):
+# plot decision boundary
+# ki, kj are the classes for which decision boundary is to be drawn.
+# y, x contains min to max ranges for respective axis
+# Qn is for type of boundary send Qn == 2 for same sigma else send Qn ==1
+def plotDecisionBoundary(mu, sigma, ki, kj, y, x):
     sigmai = sigma[ki].reshape(())
     sigmaj = sigma[kj].reshape(())
 
     if Qn == 2:
+        plt.title('Same Sigma Part: ' + str(part))
         sigmaj = sigmai
+    else:
+        plt.title('Different Sigma Part: ' + str(part))
 
     mui = mu[ki].reshape((mu[ki].shape[0], 1))
     muj = mu[kj].reshape((mu[kj].shape[0], 1))
@@ -45,8 +60,11 @@ def main():
 
     mu, sigma = calcMLE(x, pF, nF)
 
+    plt.xlabel('x1')
+    plt.ylabel('x2')
     plotDataPoints(x, y, pF, nF)
-    plotDecisionBoundary(mu, sigma, 0, 1, x2, x1, 1)
+    plotDecisionBoundary(mu, sigma, 0, 1, x2, x1)
+
     plt.show()
 
 

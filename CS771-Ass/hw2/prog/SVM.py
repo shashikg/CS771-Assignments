@@ -2,7 +2,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import svm
 
-data = np.genfromtxt('data/binclass.txt',delimiter=',')
+part = 2 #Give 1 for part 1 and 2 for part 2
+
+if part == 2:
+    data = np.genfromtxt('data/binclassv2.txt',delimiter=',')
+else:
+    data = np.genfromtxt('data/binclass.txt',delimiter=',')
 
 def plotDataPoints(x, y, pF, nF):
     plt.plot(x[pF,0], x[pF,1], 'r*')
@@ -25,6 +30,9 @@ def main():
     clf = svm.SVC(kernel='linear', C=1)
     clf.fit(x, y)
 
+    plt.xlabel('x1')
+    plt.ylabel('x2')
+    plt.title('SVM Part: ' + str(part))
     plotDataPoints(x, y, pF, nF)
     plotDecisionBoundary(clf, x2, x1)
     plt.show()

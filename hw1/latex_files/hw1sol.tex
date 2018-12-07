@@ -1,0 +1,193 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{mlsubmit}
+
+\begin{document}
+
+\initmlsubmision{1} % assignment number
+{Shashi Kant Gupta}   % your name
+{160645}	% your roll number
+
+\begin{mlsolution}
+
+  \begin{enumerate}
+    \item
+      \textbf{For Tree A:} \\
+        From leaf node 1 min. number of element in a class is 100 and from leaf node 2 also min. number of element in a class is 100. Therefore,
+        \begin{equation}
+          MissclassificationRate = \frac{100 + 100}{800} = \frac{1}{4}
+        \end{equation}
+      \textbf{For Tree B:} \\
+        From leaf node 1 min. number of element in a class is 200 and from leaf node 2 min. number of element in a class is 0. Therefore,
+        \begin{equation}
+          MissclassificationRate = \frac{200 + 0}{800} = \frac{1}{4}
+        \end{equation}
+        Yes, they are equal!
+    \item
+      \textbf{For Tree A:}
+      {\begin{equation}
+        H(S) = -\frac{1}{2}(log(\frac{1}{2}) + log(\frac{1}{2}))
+             = 1
+      \end{equation}}
+      \begin{equation}
+        H(S_{1}) = -\frac{1}{4}(log(\frac{1}{4}) + 3log(\frac{3}{4}))
+                 = 0.811
+      \end{equation}
+      \begin{equation}
+        H(S_{2}) = -\frac{1}{4}(log(\frac{1}{4}) + 3log(\frac{3}{4}))
+                 = 0.811
+      \end{equation}
+      \begin{equation}
+        \Rightarrow IG_{A} = 1 - \frac{1}{2}0.811 - \frac{1}{2}0.811
+                       = 0.189
+      \end{equation}
+      \textbf{For Tree B:}
+      {\begin{equation}
+        H(S) = -\frac{1}{2}(log(\frac{1}{2}) + log(\frac{1}{2}))
+             = 1
+      \end{equation}}
+      \begin{equation}
+        H(S_{1}) = -\frac{1}{3}(log(\frac{1}{3}) + 2log(\frac{2}{3}))
+                 = 0.918
+      \end{equation}
+      \begin{equation}
+        H(S_{2}) = -\frac{2}{2}log(\frac{2}{2})
+                 = 0.
+      \end{equation}
+      \begin{equation}
+        \Rightarrow IG_{B} = 1 - \frac{3}{4}0.918
+                       = 0.311
+      \end{equation}
+      Since $IG_{B} > IG_{A}$. Therefore, Tree B is better decision tree!
+
+    \item
+      From (1) its not possible to predict which tree to select but from (2) we can decide Tree B to better. This makes sense because entropy is better deciding factor for decision tree.
+  \end{enumerate}}
+
+\end{mlsolution}
+
+\begin{mlsolution}
+
+\noindent Yes, \textbf{1NN} will be consistent in this case!\\
+Since, there are infinite numbers of training data and each of them are correctly labeled without any noise. That means whenever you get a test data you can always find
+a training data completing close to it probability of finding such point will tend to 1 when the numbers of train data goes to infinity!
+ Therefore, you can always classify them with no error in classifcation.
+ In simple words you already have that test data in your training set!
+
+
+
+\end{mlsolution}
+
+\begin{mlsolution}
+
+Given: $\hat\vw = (\vX^{T}\vX)^{-1}\vX^{T}\vy$. Therefore, a prediction at test input $\vx_{*}$ can be written as $y_{*} = \hat\vw^{T}\vx_{*} = \vx_{*}^{T}\hat\vw$ \\
+Therefore,
+\begin{equation}
+  y_{*} = \vx_{*}^{T}(\vX^{T}\vX)^{-1}\vX^{T}\vy
+\end{equation}
+\begin{equation}
+  \Rightarrow y_{*} = \vW\vy
+\end{equation}
+where, $\vW = \vx_{*}^{T}(\vX^{T}\vX)^{-1}\vX^{T}$. Therefore, $\vW = (w_{1} w_{2} . . . w_{N})$ comes out to be a 1xN matrix. We can also write $\vy = (y_{1} y_{2} . . . y_{N})^{T}$.
+\\ Therefore,
+\begin{equation}
+  y_{*} = \vW\vy = \sum_{n=1}^Nw_{n}y_{n}
+\end{equation}
+Therefore, $w_{n}$ are the $n^{th}$ index of the 1xN matrix $\vW$. Knowing that $\vX$ is matrix whose rows are the N training vectors $\vx_{n}$, $w_{n}$ can be written as:
+\begin{equation}
+  w_{n} = \vx_{*}^T(\vX^{T}\vX)^{-1}\vx_{n}
+\end{equation}
+So, $w_{n}$ depends on the input $\vx_{*}$ and all the training data's from $\vx_{1}$ to $\vx_{n}$. Since, there exist $X^{T}X$ term in the expressin of $w_{n}$.
+Which is not in case with weighted kNN, where individual weights depends only on $\vx_{*}$ and $\vx_{n}$. Also, $\vx_{*}$ comes in numerator in case of this while for kNN it comes in denominator.
+Another difference is that $w_{n}$ are expressed as products of $\vx_{*}$ while in kNN they are expressed as sum in denominator.
+
+\end{mlsolution}
+
+\begin{mlsolution}
+
+We can use a diagonal matrix $\vM = diag(m_{11} m_{22} . . . m_{DD})$ to define a new regularization term as $\vw_{T}\vM\vw$, inspired from mahalanobis distance!\\
+Therefore, our loss becomes:
+\begin{equation}
+  \vL(\vw) = \sum_{n=1}^{N}(y_{n} - \vw^{T}\vx_{n})^2 + \vw_{T}\vM\vw
+\end{equation}
+We can also write it as,
+\begin{equation}
+  \vL(\vw) = (\vy - \vX\vw)^{T}(\vy - \vX\vw) + \vw_{T}\vM\vw
+\end{equation}
+\begin{equation}
+  \Rightarrow \frac{\partial\vL(\vw)}{\partial\vw} = -2\vX^{T}(\vy - \vX\vw ) + 2\vM\vw
+\end{equation}
+For closed form solution put $\frac{\partial\vL(\vw)}{\partial\vw} = 0$. Therefore,
+\begin{equation}
+  \vX^{T}\vy = \vX^{T}\vX\vw + \vM\vw
+\end{equation}
+\begin{equation}
+  \Rightarrow \vX^{T}\vy = (\vX^{T}\vX + \vM)\vw
+\end{equation}
+\begin{equation}
+  Therefore, \vw = (\vX^{T}\vX + \vM)^{-1}\vX^{T}\vy
+\end{equation}
+
+\end{mlsolution}
+
+\begin{mlsolution}
+
+  \begin{equation}
+    \vL(\vW) = TRACE[(\vY - \vX\vB\vS)^{T}(\vY - \vX\vB\vS)]
+  \end{equation}
+  \begin{equation}
+     = TRACE[(\vY^{T} - \vS^{T}\vB^{T}\vX^{T})(\vY - \vX\vB\vS)]
+  \end{equation}
+  \begin{equation}
+    \Rightarrow \vL(\vW) = TRACE[\vY^{T}\vY - \vY^{T}\vX\vB\vS - \vS^{T}\vB^{T}\vX^{T}\vY + \vS^{T}\vB^{T}\vX^{T}\vX\vB\vS]
+  \end{equation}
+  Using the identities we get,
+  \begin{equation}
+    \Rightarrow \frac{\partial\vL(\vW)}{\partial\vS} = -(\vY^{T}\vX\vB)^{T} - \vB^{T}\vX^{T}\vY + ((\vB^{T}\vX^{T}\vX\vB) + (\vB^{T}\vX^{T}\vX\vB)^{T})\vS
+  \end{equation}
+  For closed form solution keeping $\vB$ constant put $\frac{\partial\vL(\vW)}{\partial\vS} = 0$. Therefore,
+  \begin{equation}
+    \vB^{T}\vX^{T}\vY = (\vB^{T}\vX^{T}\vX\vB)\vS
+  \end{equation}
+  \begin{equation}
+    \Rightarrow \vS = (\vB^{T}\vX^{T}\vX\vB)^{-1}\vB^{T}\vX^{T}\vY
+  \end{equation}
+  writing $\vB^{T}\vX^{T} = (\vX\vB)^{T}$,
+  \begin{equation}
+    \Rightarrow \vS = ((\vX\vB)^{T}\vX\vB)^{-1}(\vX\vB)^{T}\vY
+  \end{equation}
+  replacing $\vX\vB = \vV$, we get,
+  \begin{equation}
+    \Rightarrow \vS = (\vV^{T}\vV)^{-1}\vV^{T}\vY
+  \end{equation}
+  Therefore, from the above equation when putting $\vX\vB = \vV$ we can see that the solution is identifical to the solution of
+standard multi-output regression where $\vX$ have been transformed to $\vV$.
+
+
+\end{mlsolution}
+
+\begin{mlsolution}
+\noindent\textbf{Method 1:} \\
+Test accuracy with Euclidean distance is 46.8932038835 \\
+I had also tried implementing the mahalanobis distance but not much improvement observed. Following are the results based on number of iterations I runned to optimise theta: \\
+Test accuracy for iter = 5 is: 47.1844660194 \\
+Test accuracy for iter = 10 is: 48.2362459547\\
+Test accuracy for iter = 15 is: 48.8996763754\\
+Test accuracy for iter = 20 is: 49.7249190939\\
+Test accuracy for iter = 25 is: 50.1294498382\\
+Test accuracy for iter = 30 is: 50.2103559871\\
+
+\noindent\textbf{Method 2:} \\
+Test accuracy for $\lambda$ = 0.01 is: 58.0906148867 \\
+Test accuracy for $\lambda$ = 0.1 is: 59.5469255663 \\
+Test accuracy for $\lambda$ = 1 is: 67.3948220065 \\
+Test accuracy for $\lambda$ = 10 is: 73.284789644 \\
+Test accuracy for $\lambda$ = 20 is: 71.6828478964 \\
+Test accuracy for $\lambda$ = 50 is: 65.0809061489 \\
+Test accuracy for $\lambda$ = 100 is: 56.4724919094 \\
+$\lambda$ = 10 gives the best result!
+
+\end{mlsolution}
+
+
+\end{document}

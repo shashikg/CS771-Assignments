@@ -1,0 +1,2 @@
+- Put the data files in a folder /data/ for each part
+- Run the python files as per the different questions!

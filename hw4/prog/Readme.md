@@ -1,0 +1,2 @@
+- Put the data files inside a data folder
+- Simply run the python script using python2
